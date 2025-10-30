@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Loja</title>
+
+  <!-- Fonte cursiva parecida com Snell Roundhand -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth; /* Rolagem suave ao clicar no menu */
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Verdana, Geneva, sans-serif;
+      background-color: #F9D9BB;
+    }
+
+    /* MENU FIXO COM DEGRADÊ */
+    nav {
+      background: linear-gradient(90deg, rgba(255, 237, 137, 1) 0%, rgba(255, 159, 91, 1) 30%, rgba(255, 114, 114, 1) 68%, rgba(216, 160, 230, 1) 100%);
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 8px 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+    }
+
+    .content {
+      margin-top: 70px; /* espaço por causa do menu fixo */
+      padding: 20px;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-family: "Great Vibes", cursive;
+      color: #B34D4D;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      width: 250px;
+      padding: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #B34D4D;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+
+    .bnt {
+      background-color: #FF7F50;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .bnt:hover {
+      background-color: #FF9966;
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #FFED89;
+      font-weight: bold;
+    }
+
+    /* BOTÃO VOLTAR AO TOPO */
+    .back-to-top {
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+      width: 150px;
+      text-decoration: none;
+      background-color: #FF7F50;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      animation: pulando 1.2s ease-in-out infinite; /* animação leve */
+    }
+
+    .back-to-top:hover {
+      background-color: #FF9966;
+      transform: scale(1.1);
+    }
+
+    /* ANIMAÇÃO DO BOTÃO */
+    @keyframes pulando {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#Introducao">Introdução</a>
+      <a href="#Produtos">Produtos</a>
+      <a href="#Promocoes">Promoções</a>
+      <a href="#Noticias">Notícias</a>
+      <a href="#Mapa">Mapa</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section id="Introducao">
+      <h2>Introdução</h2>
+      <p>Bem-vindo à nossa loja! Confira nossas novidades e promoções.</p>
+    </section>
+
+    <section id="Produtos">
+      <h2>Produtos</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Fone Bluetooth</h3>
+          <p>Cancelamento de ruído e até 30h de bateria.</p>
+          <div class="price">R$299,90</div>
+          <button class="bnt">Comprar</button>
+        </div>
+        <div class="card">
+          <h3>Teclado Mecânico</h3>
+          <p>Switch silencioso e iluminação ajustável.</p>
+          <div class="price">R$499,90</div>
+          <button class="bnt">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Promocoes">
+      <h2>Promoções</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Smartwatch Fit</h3>
+          <p>Notificações e resistência à água.</p>
+          <div class="price">R$429,90</div>
+          <button class="bnt">Comprar</button>
+        </div>
+        <div class="card">
+          <h3>Programa de Fidelidade</h3>
+          <p>Ganhe pontos e troque por descontos.</p>
+          <button class="bnt">Ler mais</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Noticias">
+      <h2>Notícias</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Nova coleção sustentável</h3>
+          <p>Lançamos linha com materiais reciclados.</p>
+          <button class="bnt">Comprar</button>
+        </div>
+        <div class="card">
+          <h3>Novidades exclusivas</h3>
+          <p>Fique por dentro das últimas tendências.</p>
+          <button class="bnt">Ler mais</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Mapa">
+      <h2>Mapa</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.215175623278!2d-46.414082099999966!3d-23.704008800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6cf6b9a660b5%3A0xb470d63bf1a2159e!2sEtec%20de%20Ribeir%C3%A3o%20Pires!5e0!3m2!1spt-BR!2sbr!4v1756425625517!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    Minha Loja © 2025
+  </footer>
+
+  <a href="#Introducao" class="back-to-top">⬆ Voltar ao topo</a>
+</body>
+</html>
+
